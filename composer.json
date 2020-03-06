@@ -1,0 +1,20 @@
+{
+    "name": "arowpay/arowpay-php",
+    "description": "Simple and straight forward Arowpay IPN and call APIs",
+    "require": {
+        "php": ">5.6.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dev",
+            "email": "arowpaydev@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+     "autoload": {
+        "psr-4": {
+            "ArowPay\\": "src/Arowpay"
+        }
+    }
+}
