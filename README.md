@@ -49,10 +49,11 @@ Call APIs:
 <?php
 require_once './vendor/autoload.php';
 use ArowPay\API;
-
+//getCallbackAddress
 $api=new API();
 $api->setAppkey('1Zf5Q28U2a5gmt367GQcbSCl35')->setAppsecret('nG8Pp15i8eWyE7tpDfpPr2D5326A7JfY8Ds3CqKqf5');
-$response=$api->getCallbackAddress("BTC","customStrings");
+$fields=array('currency'=>'BTC','custom'=>'CustomStrings');
+$response=$api->execute("getCallbackAddress",$fields);
 if($response['code']="200"){
      // successfully get an address
     $newAddress=$response['msg'];

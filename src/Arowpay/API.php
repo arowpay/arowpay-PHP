@@ -8,21 +8,6 @@ class API
 {
     use Initialize;
 
-    /**
-     * get callback address (BTC,ETH,USDTERC20,etc)
-     *
-     * @param  string  $currency
-     * @param  array  $custom
-     * @return mixed
-     */
-    public function getCallbackAddress($currency,$custom)
-    {    
-        
-        $command='getCallbackAddress';
-        $fields=array('currency'=>$currency,'custom'=>$custom);
-        $response=$this->execute($command,$fields);
-        return $response;
-    }
 
     public function execute($command ,array $fields = [])
     {
